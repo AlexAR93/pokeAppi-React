@@ -1,0 +1,64 @@
+
+.main form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main input{
+    border: solid #000 1px;
+    border-radius: 30px;
+    width: 30rem;
+    height: 50px;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.main input:focus{
+    background: #8eaaa7ad;
+    color: #fff;
+}
+
+.main button{
+    margin-top: 2rem;
+    width: 90px;
+    height: 48px;
+    background: #049;
+    border-style: none;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.main button:active{
+    transition: transform .2s;
+    transform: scale(.98);
+}
+
+.main .cardBackground{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #25354ea7;
+    display: none;
+}
+.main .card{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 40%;
+    border-radius: 30px;
+}
+
+.main img{
+    width: 150px;
+    height: 150px;
+}

@@ -1,17 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import PokemonApp from './PokemonApp';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <PokemonApp />
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// const usarApi=async()=>{
+//   const resp=await fetch("https://pokeapi.co/api/v2/pokemon");
+//   const data=await resp.json();
+  
+  
+
+//   return console.log(data);
+
+// }
+// usarApi()
+// const getPokemon = async(pokemon) => {
+
+//   const resp=await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
+
+//   const data=await resp.json();
+  
+//   return data
+    
+
+// }
+// const newArray=getPokemon(25).then(data=>console.log(data))
+// getPokemon("pikachu")
+
