@@ -1,5 +1,5 @@
 import React from 'react'
-import log from '../../asset/log.png'
+import log from './../../asset/log.png'
 
 
 const Header = () => {
