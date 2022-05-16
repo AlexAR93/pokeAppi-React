@@ -1,11 +1,11 @@
 import React from 'react'
-import log from './../../asset/log.png'
+import log from './../../asset/log.png' 
 
 
 const Header = () => {
     return (
         <header className='header'>
-            <img src={log} alt='log'/>
+            <img src={log} alt='logo'/>
         </header>
   )
 }
