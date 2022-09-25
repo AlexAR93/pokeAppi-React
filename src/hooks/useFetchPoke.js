@@ -16,7 +16,7 @@ const useFetchPoke = (pokemon) => {
                     abilities: data.abilities,
                     names:data.name,
                     id:data.id,
-                    image:data.sprites.front_default,
+                    image:data.sprites?.front_default,
                     weight:data.weight,
                     height:data.height,
                     loading: false

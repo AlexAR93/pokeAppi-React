@@ -6,32 +6,33 @@ import './card.css'
 
 const Search = () => {
   
-  const [input, setInput] = useState({name:''})
+  const [input, setInput] = useState('')
+  const [submit, setSubmit] = useState('')
+
   
-  const{name}=input;
 
   const handleInputChange=({target})=>{
-    setInput({
-      ...input,
-      [target.name]:target.value
-    })
+    console.log(target.value)
+    setInput(target.value)
   }
 
-  const {names,image,weight,height}=useFetchPoke(name)
+
 
   
 
   let s=document.getElementById("cardBackground")
-
-
-
-  const handleSubmit=(e)=>{
-    e.preventDefault()
-    names? s.style.display="flex":alert("NO EXISTE!!!")
-  }
-
   
 
+  const {names,image,weight,height}=useFetchPoke(submit)
+  const handleSubmit=(e)=>{
+    e.preventDefault()
+    setSubmit(input.toLowerCase())
+    s.style.display="flex"
+  
+  }
+
+
+ 
 
   return (
     <form onSubmit={handleSubmit}>
@@ -40,7 +41,7 @@ const Search = () => {
           name="name"
           placeholder='Busca tu pokemon'
           autoComplete='off'
-          value={name}
+          value={input}
           onChange={handleInputChange}
 
         />

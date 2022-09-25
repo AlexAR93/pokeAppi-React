@@ -1,9 +1,9 @@
 import React from 'react'
-
+import './index.css';
 const Footer = () => {
   return (
     <footer className='footer'>
-        <h2>Este es el footer papá</h2>
+        <p>© Alex Agustin Rodriguez 2022</p>
     </footer>
   )
 }
