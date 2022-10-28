@@ -22,6 +22,7 @@ const useFetchPoke = (pokemon) => {
                     loading: false
                 });
             })
+            .catch(err=>pokemon&&alert('No existe este pokemon'))
 
     }, [pokemon])
 

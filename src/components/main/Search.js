@@ -7,32 +7,29 @@ import './card.css'
 const Search = () => {
   
   const [input, setInput] = useState('')
-  const [submit, setSubmit] = useState('')
+  const [submit, setSubmit] = useState({loading:true})
 
   
 
   const handleInputChange=({target})=>{
-    console.log(target.value)
     setInput(target.value)
   }
-
-
-
   
 
-  let s=document.getElementById("cardBackground")
-  
+  let cardContainer=document.getElementById("cardBackground")
 
-  const {names,image,weight,height}=useFetchPoke(submit)
-  const handleSubmit=(e)=>{
+  const {names,image,weight,height,loading}=useFetchPoke(submit?.names);
+  const handleSubmit=(e,loading)=>{
     e.preventDefault()
-    setSubmit(input.toLowerCase())
-    s.style.display="flex"
+    setSubmit({
+      ...submit,
+      names:input.toLowerCase(),
+      loading:loading,
+      
+    })
+    cardContainer.classList.toggle('cardBackground-hide')
   
   }
-
-
- 
 
   return (
     <form onSubmit={handleSubmit}>
@@ -46,7 +43,8 @@ const Search = () => {
 
         />
         <button type='submit'>Search</button>
-        <Card names={names} image={image} weight={weight} height={height}
+        
+        <Card names={names} image={image} weight={weight} height={height} loading={loading}
         />
     </form>
   )
